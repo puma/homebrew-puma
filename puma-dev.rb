@@ -27,4 +27,3 @@ class PumaDev < Formula
     EOS
   end
 end
-
