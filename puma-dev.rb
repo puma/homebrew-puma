@@ -1,9 +1,9 @@
 class PumaDev < Formula
   desc "A tool to manage rack apps in development with puma"
   homepage "https://github.com/puma/puma-dev"
-  url "https://github.com/puma/puma-dev/releases/download/v0.8/puma-dev-v0.8-darwin-amd64.zip"
-  sha256 "863792cdc534ec23a7f0272a7104320b97cec2e0f1b453de6e9b172fc5f0657c"
-  version '0.8'
+  url "https://github.com/puma/puma-dev/releases/download/v0.9/puma-dev-v0.9-darwin-amd64.zip"
+  sha56 "802bdef7ff838f1f5d3a6bb5ea1f2ac9f066122ac8ad1fcc1b329b9e1e4be692"
+  version '0.9'
 
   def install
     bin.install "puma-dev"
@@ -23,6 +23,9 @@ class PumaDev < Formula
         sudo puma-dev -setup
 
       Install puma-dev as a launchd agent (required for port 80 usage):
+        puma-dev -install
+
+      To update to the latest release:
         puma-dev -install
     EOS
   end
