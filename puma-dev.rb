@@ -18,7 +18,7 @@ class PumaDev < Formula
   end
 
   def caveats
-    <<-EOS.undent
+    <<~EOS
       Setup dev domains:
         sudo puma-dev -setup
 
