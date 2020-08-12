@@ -1,4 +1,4 @@
-class PumaDev < Formula
+class PumaDevBeta < Formula
   desc "A tool to manage rack apps in development with puma"
   homepage "https://github.com/puma/puma-dev"
   url "https://github.com/puma/puma-dev/releases/download/v0.15b/puma-dev-0.15b-darwin-amd64.zip"
