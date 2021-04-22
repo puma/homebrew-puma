@@ -1,16 +1,16 @@
 class PumaDev < Formula
   desc 'A tool to manage rack apps in development with puma'
   homepage 'https://github.com/puma/puma-dev'
-  version '0.15.2'
+  version '0.16.0'
 
   base_url = "https://github.com/puma/puma-dev/releases/download/v#{version}/puma-dev-#{version}"
 
   if OS.mac?
     url "#{base_url}-darwin-amd64.zip"
-    sha256 '9b8efd851283f1ddb284580ac200c233ab9b285d770752d51d6d338f7c2020ab'
+    sha256 'fd95185d130068aac2216c01ba52fe51f9794f93bcb2927980aee93d8a2a4d8e'
   elsif OS.linux?
     url "#{base_url}-linux-amd64.tar.gz"
-    sha256 '89995e01e07f30d5e41b2d9060c837a521228b0009a0ab037ee7ac066cc2403c'
+    sha256 '5811f6feda333d011c8d6ca6c3bce07fa3ae27ba62d6f7cfb72099ff44e16b53'
   end
 
   def install
