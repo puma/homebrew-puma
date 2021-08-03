@@ -5,7 +5,10 @@ class PumaDev < Formula
 
   base_url = "https://github.com/puma/puma-dev/releases/download/v#{version}/puma-dev-#{version}"
 
-  if OS.mac?
+  if OS.mac? and Hardware::CPU.arm?
+    url "#{base_url}-darwin-arm64.zip"
+    sha256 'TODO'
+  elsif OS.mac?
     url "#{base_url}-darwin-amd64.zip"
     sha256 'cd399611ee350952b24ad8555d731253510e03fdd821b09b5ae7135faa24778c'
   elsif OS.linux?
@@ -45,4 +48,3 @@ class PumaDev < Formula
     end
   end
 end
-
