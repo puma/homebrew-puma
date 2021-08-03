@@ -1,7 +1,7 @@
 class PumaDev < Formula
   desc 'A tool to manage rack apps in development with puma'
   homepage 'https://github.com/puma/puma-dev'
-  version '0.16.1'
+  version '0.16.2'
 
   base_url = "https://github.com/puma/puma-dev/releases/download/v#{version}/puma-dev-#{version}"
 
