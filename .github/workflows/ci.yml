@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: ['*']
+
+  workflow_dispatch:
+
+jobs:
+  install:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+
+    name: ${{ matrix.os }}
+
+    steps:
+      - run: brew install $GITHUB_REPOSITORY_OWNER/puma/puma-dev
+      - run: which -a puma-dev
+      - run: puma-dev -V
