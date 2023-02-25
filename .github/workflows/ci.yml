@@ -7,15 +7,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  install:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest]
-
-    name: ${{ matrix.os }}
-
+  darwin-install:
+    runs-on: macos-latest
     steps:
+      - run: brew install $GITHUB_REPOSITORY_OWNER/puma/puma-dev
+      - run: which -a puma-dev
+      - run: puma-dev -V
+
+  linux-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
       - run: brew install $GITHUB_REPOSITORY_OWNER/puma/puma-dev
       - run: which -a puma-dev
       - run: puma-dev -V
